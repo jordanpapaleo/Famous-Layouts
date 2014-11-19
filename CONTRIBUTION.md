@@ -13,10 +13,10 @@
 
 ### Angular
 * Controllers
-    * Controllers are named using Pascal Casing appended with the full word "Controller"
-        * ex: angular.module('MyController')
+    * Controllers are named using Pascal Casing appended with "Ctrl"
+        * ex: angular.module('MyCtrl')
     * File name should exactly the controller name with a dot reference to the type
-        * ex: Home.ctrl.js
+        * ex: HomeCtrl.ctrl.js
 * Services
     * Services are named using Pascal Casing
         * ex: angular.module('GetData')
