@@ -4,7 +4,7 @@
   "description": "This is a quick start template for Famo.us and Famou-Angular Apps",
   "scripts": {
     "start": "npm test && serve",
-    "install": "bower install",
+    "postinstall": "bower install",
     "test": "npm run lint -s",
     "lint-eslint": "eslint apps/",
     "lint-jscs": "jscs apps/",
