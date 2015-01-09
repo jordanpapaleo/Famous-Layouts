@@ -21,6 +21,17 @@
 <body>
 <div id="wrapper">
     <fa-app class="app" ng-controller="AppCtrl">
+        <fa-scroll-view fa-pipe-from="scrollHandler" fa-options="scrollViewOptions">
+            <fa-modifier ng-repeat="content in contents" fa-animate-enter="linkEnter(content.t, $index, $done)" fa-animate-leave="linkLeave(content.t, $index, $done)">
+                <fa-modifier fa-size="[500, getIndexHeight($index)]">
+                    <fa-surface fa-pipe-to="scrollHandler">
+                        <div id="content-{{$index}}">
+                            {{content.text}}
+                        </div>
+                    </fa-surface>
+                </fa-modifier>
+            </fa-modifier>
+        </fa-scroll-view>
     </fa-app>
 </div>
 

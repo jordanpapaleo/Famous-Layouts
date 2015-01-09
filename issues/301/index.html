@@ -7,25 +7,19 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" href="../../bower_components/famous-angular/dist/famous-angular.css">
-
-    <style>
-        .app {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
-    </style>
 </head>
 <body>
 <div id="wrapper">
     <fa-app class="app" ng-controller="AppCtrl">
+        <!--<fa-modifier fa-opacity=".25" fa-skew="mySkew" fa-translate="[100, 50, 1]" fa-scale="myScale">-->
+        <!--<fa-modifier fa-translate="translate.get()" fa-opacity=".5" fa-scale="myScale" fa-skew="mySkew">-->
+        <fa-modifier fa-transform="transform">
+            <fa-surface>I'm translucent, skewed, and translated</fa-surface>
+        </fa-modifier>
     </fa-app>
 </div>
 
 <script type="text/javascript" src="../../bower_components/angular/angular.js"></script>
-<script type="text/javascript" src="../../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script type="text/javascript" src="../../bower_components/famous/dist/famous-global.js"></script>
 <script type="text/javascript" src="../../bower_components/famous-angular/dist/famous-angular.js"></script>
 

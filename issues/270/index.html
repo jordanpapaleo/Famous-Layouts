@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html ng-app="MyApp">
+<head>
+    <title>Famous-Angular</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../../bower_components/famous-angular/dist/famous-angular.css">
+
+    <style>
+        .app {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <fa-app class="app" ng-controller="AppCtrl">
+        <!--<fa-grid-layout fa-options="myGridLayoutOptions">
+            <fa-scroll-view fa-pipe-from="myEventHandler">
+                <fa-view ng-repeat="view in views">
+                    <fa-modifier fa-size="[undefined, 160]">
+                        <fa-surface fa-background-color="view.color" fa-pipe-to="myEventHandler"></fa-surface>
+                    </fa-modifier>
+                </fa-view>
+            </fa-scroll-view>
+
+            <fa-scroll-view fa-pipe-from="myEventHandler2">
+                <fa-view ng-repeat="view2 in views2">
+                    <fa-modifier fa-size="[undefined, 160]">
+                        <fa-surface fa-background-color="view2.color" fa-pipe-to="myEventHandler2"></fa-surface>
+                    </fa-modifier>
+                </fa-view>
+            </fa-scroll-view>
+        </fa-grid-layout>-->
+
+        <fa-scroll-view fa-pipe-from="eventHandler" fa-options="options.scrollViewOuter">
+
+            <!-- sidebar view -->
+            <fa-view fa-index="0">
+                <fa-modifier fa-size="[200, undefined]" id="sideBarMod">
+                    <fa-surface fa-pipe-to="eventHandler"
+                                fa-background-color="'blue'"
+                                fa-size="[undefined, undefined]">
+                        Sidebar (scroll horizontally to hide)
+                    </fa-surface>
+                </fa-modifier>
+            </fa-view>
+
+            <!-- main view -->
+            <fa-view fa-index="1">
+                <!-- inner scroll view that scrolls vertically-->
+                <fa-scroll-view fa-pipe-from="eventHandler" fa-options="options.scrollViewInner">
+                    <fa-view ng-repeat="item in list">
+                        <fa-surface fa-pipe-to="eventHandler"
+                                    fa-size="[undefined, 200]"
+                                    fa-background-color="'red'">
+                            {{item.content}}
+                        </fa-surface>
+                    </fa-view>
+                </fa-scroll-view>
+            </fa-view>
+
+        </fa-scroll-view>
+    </fa-app>
+</div>
+
+<script type="text/javascript" src="../../bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="../../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script type="text/javascript" src="../../bower_components/famous/dist/famous-global.js"></script>
+<script type="text/javascript" src="../../bower_components/famous-angular/dist/famous-angular.js"></script>
+
+<script type="text/javascript" src="app.js"></script>
+
+</body>
+</html>

@@ -21,6 +21,13 @@
 <body>
 <div id="wrapper">
     <fa-app class="app" ng-controller="AppCtrl">
+        <fa-modifier fa-origin="[.5, .5]" fa-align="[.5, .5]" >
+            <fa-image-surface fa-size="[200, 200]" fa-options="{{one}}" fa-image-url="{{path}}"></fa-image-surface>
+        </fa-modifier>
+
+        <fa-modifier fa-origin="[.5, .5]" fa-align="[.6, .6]">
+            <fa-image-surface fa-size="[200, 200]" fa-options="{{two}}" fa-image-url="{{path}}"></fa-image-surface>
+        </fa-modifier>
     </fa-app>
 </div>
 

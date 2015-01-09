@@ -1,6 +1,5 @@
 var MyApp = angular.module('MyApp', [
-    'famous.angular',
-    'ui.router'
+    'famous.angular'
 ]);
 
 MyApp.controller('AppCtrl', ['$scope', '$famous',
@@ -9,4 +8,8 @@ MyApp.controller('AppCtrl', ['$scope', '$famous',
         var Easing = $famous['famous/transitions/Easing'];
         var Transform = $famous['famous/core/Transform'];
         var EventHandler = $famous['famous/core/EventHandler'];
+
+        $scope.goNextStep = function() {
+            console.info('goNextStep');
+        };
     }]);
