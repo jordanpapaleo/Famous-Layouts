@@ -12,10 +12,10 @@
   },
   "author": "Jordan Papaleo <papaleowebdev@gmail.com>",
   "license": "ISC",
-  "homepage": "https://github.com/breck421/Famous-Template",
+  "homepage": "https://github.com/jordanpapaleo/Famous-Template",
   "repository": {
     "type": "git",
-    "url": "https://github.com/breck421/Famous-Template.git"
+    "url": "https://github.com/jordanpapaleo/Famous-Template.git"
   },
   "devDependencies": {
     "eslint": "^0.9.2",
