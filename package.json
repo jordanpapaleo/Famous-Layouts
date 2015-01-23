@@ -1,7 +1,7 @@
 {
-  "name": "Famous-Template",
+  "name": "Famous-Layouts",
   "version": "0.0.1",
-  "description": "This is a quick start template for Famo.us and Famou-Angular Apps",
+  "description": "",
   "scripts": {
     "start": "npm test && serve",
     "postinstall": "bower install",
