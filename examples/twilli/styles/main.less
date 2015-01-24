@@ -1,0 +1,93 @@
+@import "normalize.less";
+
+@color: #f8f8ff;
+
+.app {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+body {
+    font-family: 'open_sanslight', sans-serif;
+    color: @color;
+}
+
+button.outline {
+    border: 1px solid @color;
+    padding: 13px 30px;
+    color: @color;
+}
+
+
+.background-overlay {
+    background: url(../assets/background-image-overlay.png) repeat;
+    z-index: -1;
+}
+
+.background-image {
+    background: url("") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: -2;
+}
+
+.main-nav {
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.29) 0%, rgba(0,0,0,0) 78%, rgba(0,0,0,0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.29)), color-stop(78%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.29) 0%,rgba(0,0,0,0) 78%,rgba(0,0,0,0) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,0,0.29) 0%,rgba(0,0,0,0) 78%,rgba(0,0,0,0) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,0.29) 0%,rgba(0,0,0,0) 78%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.29) 0%,rgba(0,0,0,0) 78%,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a000000', endColorstr='#00000000',GradientType=0 );
+
+    color: @color;
+    text-align: center;
+
+    h1 {
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+     a {
+         color: @color;
+         display: block;
+         text-transform: lowercase;
+         font-size: 18px;
+         padding: 10px 0;
+         text-decoration: none;
+         transition: background .25s ease-in-out;
+         -o-transition: background .25s ease-in-out;
+         -ms-transition: background .25s ease-in-out;
+         -moz-transition: background .25s ease-in-out;
+         -webkit-transition: background .25s ease-in-out;
+
+         &:hover, &[hover] {
+             background: rgba(0,0,0,0.3);
+         }
+     }
+}
+
+.main-content {
+    h2 {
+        font-size: 2.25em;
+        line-height: 1.1;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.33);
+        text-align: right;
+
+    }
+}

@@ -16,13 +16,49 @@
             bottom: 0;
             left: 0;
         }
+
+        .surface {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-align: center;
+            padding: 25px;
+
+        }
     </style>
 </head>
 <body>
-<div id="wrapper">
     <fa-app class="app" ng-controller="AppCtrl">
+        <fa-modifier fa-align="[.5, 0]" fa-origin="[.5, 0]" fa-size="[960, undefinded]">
+            <fa-scroll-view fa-pipe-from="eventHandler" fa-options="layout.mainScroll">
+                <fa-view fa-index="0">
+                    <fa-modifier fa-align="[.5, 0]" fa-origin="[.5, 0]" fa-size="[undefined, 400]">
+                        <fa-surface fa-pipe-to="eventHandler" ng-class="'surface'">
+                            <div>Surface One</div>
+                        </fa-surface>
+                    </fa-modifier>
+                </fa-view>
+
+                <fa-modifier>
+                    <fa-view fa-index="1">
+                        <fa-grid-layout fa-options="layout.grid">
+                            <fa-modifier fa-size="[undefined, 200]">
+                                <fa-surface fa-pipe-to="eventHandler" ng-class="'surface'">
+                                    <div>Surface Two</div>
+                                </fa-surface>
+                            </fa-modifier>
+
+                            <fa-modifier fa-size="[undefined, 200]">
+                                <fa-surface fa-pipe-to="eventHandler" ng-class="'surface'">
+                                    <div>Surface Three</div>
+                                </fa-surface>
+                            </fa-modifier>
+                        </fa-grid-layout>
+                    </fa-view>
+                </fa-modifier>
+            </fa-scroll-view>
+        </fa-modifier>
     </fa-app>
-</div>
 
 <script type="text/javascript" src="../../../bower_components/angular/angular.js"></script>
 <script type="text/javascript" src="../../../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
