@@ -10,43 +10,22 @@ Twilli.controller('AppController', ['$scope', '$famous',
         var Transform = $famous['famous/core/Transform'];
         var EventHandler = $famous['famous/core/EventHandler'];
 
-        var self = this;
+        $scope.mainScroll = new EventHandler();
+        $scope.backgroundImage = "../assets/bg1.jpg";
 
-        this.init = function () {
-            this.setScope();
-            this.load();
-        };
-
-        this.load = function () {
-            this.setScopeEvents();
-        };
-
-        this.setScope = function () {
-            $scope.myEventHandler = new EventHandler();
-            $scope.backgroundImage = "../assets/bg1.jpg";
-
-            $scope.layout = {
-                mainScroll: {
-                    paginated: true,
-                    speedLimit: 5
-                }
-            };
-        };
-
-
-        this.setScopeEvents = function () {
-            $scope.getPageHeight = function() {
-              return window.innerHeight;
-            };
-
-            $scope.getPageWidth = function() {
-              return window.innerWidth * .6;
-            };
-
-            $scope.setBackgroundImage = function(img) {
-                $scope.backgroundImage = img;
+        $scope.layout = {
+            mainScroll: {
+                paginated: true,
+                speedLimit: 5
             }
         };
 
-        this.init();
+        $scope.getMainViewDimensions = function() {
+            return [window.innerWidth * .6, window.innerHeight]
+        };
+
+        $scope.setBackgroundImage = function(img) {
+            $scope.backgroundImage = img;
+        };
+
     }]);
